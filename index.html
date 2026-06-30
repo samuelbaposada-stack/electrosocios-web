@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrosocios — Reparación de bombas de agua y motores eléctricos en Medellín</title>
+<meta name="description" content="Reparación y venta de bombas de agua y motores eléctricos en San Benito, Medellín. Diagnóstico real, repuestos y garantía.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--bg-panel:#141612;--bg-card:#101210;--green:#aef509;--green-dim:#7ba807;--green-glow:#c8ff3d;--white:#f2f3ee;--gray:#8a8f86;--line:#232722;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;line-height:1.5;overflow-x:hidden;}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:800;letter-spacing:-0.02em;}
+.mono{font-family:'JetBrains Mono',monospace;}a{color:inherit;text-decoration:none;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+.grid-bg{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:0.25;}
+header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1140px;margin:0 auto;}
+.logo-mark{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:800;font-size:18px;}
+.logo-mark svg{width:30px;height:30px;}.logo-mark span{color:var(--green);}
+nav ul{display:flex;gap:32px;list-style:none;}nav ul a{font-size:14px;color:var(--gray);transition:color .2s;}nav ul a:hover{color:var(--green);}
+.nav-cta{background:var(--green);color:#0a0a0a;padding:10px 18px;border-radius:4px;font-weight:700;font-size:13px;}
+.hero{padding:90px 0 70px;}.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;}
+.eyebrow{font-family:'JetBrains Mono';font-size:12px;color:var(--green);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+.hero h1{font-size:clamp(34px,5vw,56px);line-height:1.04;margin-bottom:20px;}.hero h1 .accent{color:var(--green);}
+.hero p.lead{font-size:17px;color:var(--gray);max-width:480px;margin-bottom:32px;}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:4px;font-weight:700;font-size:14px;}
+.btn-primary{background:var(--green);color:#0a0a0a;}
+.btn-ghost{border:1px solid var(--line);color:var(--white);}
+.readout{background:var(--bg-panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+.readout-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);font-family:'JetBrains Mono';font-size:11px;color:var(--gray);}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--line);}
+.dot.live{background:var(--green);animation:pulse 1.6s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+.readout-body{padding:24px;font-family:'JetBrains Mono';}
+.readout-row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px dashed var(--line);font-size:13px;}
+.readout-row:last-child{border-bottom:none;}.readout-row .label{color:var(--gray);}
+.readout-row .val{color:var(--white);font-weight:700;}.readout-row .val.ok{color:var(--green);}
+.readout-footer{padding:16px 24px;background:#0d0f0c;border-top:1px solid var(--line);font-family:'JetBrains Mono';font-size:11px;color:var(--green);}
+section{padding:80px 0;border-top:1px solid var(--line);}
+.section-head{margin-bottom:48px;max-width:600px;}
+.section-head h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:14px;}.section-head p{color:var(--gray);font-size:15px;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.service-card{background:var(--bg-card);padding:32px 28px;}
+.service-card .num{font-family:'JetBrains Mono';font-size:12px;color:var(--green);margin-bottom:18px;}
+.service-card h3{font-size:19px;margin-bottom:10px;font-weight:700;}.service-card p{color:var(--gray);font-size:14px;}
+.process-list{display:flex;flex-direction:column;}
+.process-step{display:grid;grid-template-columns:90px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line);}
+.process-step:first-child{border-top:1px solid var(--line);}
+.process-step .step-num{font-family:'JetBrains Mono';font-size:13px;color:var(--green);}
+.process-step h3{font-size:19px;margin-bottom:8px;}.process-step p{color:var(--gray);font-size:14px;}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.gallery-item{aspect-ratio:1;background:var(--bg-panel);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;}
+.gallery-item svg{width:28px;height:28px;stroke:var(--gray);}
+.gallery-item span{font-family:'JetBrains Mono';font-size:10px;color:var(--gray);}
+.gallery-note{margin-top:20px;color:var(--gray);font-size:13px;font-family:'JetBrains Mono';}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.loc-card{background:var(--bg-panel);border:1px solid var(--line);border-radius:8px;padding:32px;}
+.loc-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);}.loc-row:last-child{border-bottom:none;}
+.loc-row svg{width:20px;height:20px;stroke:var(--green);flex-shrink:0;margin-top:2px;}
+.loc-row .t{font-size:12px;color:var(--gray);font-family:'JetBrains Mono';margin-bottom:4px;}
+.loc-row .v{font-size:15px;color:var(--white);font-weight:500;}
+.map-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;min-height:320px;}
+.map-frame iframe{width:100%;height:100%;min-height:320px;border:0;}
+.cta-section{background:var(--bg-panel);border-top:1px solid var(--line);text-align:center;padding:90px 24px;}
+.cta-section h2{font-size:clamp(28px,4vw,44px);margin-bottom:16px;}
+.cta-section p{color:var(--gray);max-width:480px;margin:0 auto 36px;font-size:15px;}
+.social-row{display:flex;gap:16px;justify-content:center;margin-top:40px;flex-wrap:wrap;}
+.social-pill{display:flex;align-items:center;gap:8px;border:1px solid var(--line);padding:10px 18px;border-radius:30px;font-size:13px;color:var(--gray);font-family:'JetBrains Mono';}
+.social-pill .dot-small{width:6px;height:6px;border-radius:50%;background:var(--green);}
+footer{padding:32px 24px;text-align:center;color:var(--gray);font-size:12px;font-family:'JetBrains Mono';}
+footer .f-logo{color:var(--green);}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<header><nav>
+<a href="#" class="logo-mark"><svg viewBox="0 0 100 100"><circle cx="50" cy="42" r="28" fill="none" stroke="#aef509" stroke-width="4" stroke-linecap="round" stroke-dasharray="140 35"/><path d="M55 24 L38 48 L50 48 L44 68 L65 40 L52 40 Z" fill="#aef509"/></svg>ELECTRO<span>SOCIOS</span></a>
+<ul><li><a href="#servicios">Servicios</a></li><li><a href="#proceso">Proceso</a></li><li><a href="#trabajos">Trabajos</a></li><li><a href="#ubicacion">Ubicación</a></li></ul>
+<a class="nav-cta" href="https://wa.me/573226627246" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+</nav></header>
+<section class="hero" style="border-top:none;padding-top:90px;"><div class="wrap hero-grid">
+<div>
+<div class="eyebrow">Taller en San Benito, Medellín</div>
+<h1>Reparamos lo que <span class="accent">otros descartan.</span></h1>
+<p class="lead">Reparación y venta de bombas de agua y motores eléctricos, con diagnóstico real antes de cobrarte un solo peso.</p>
+<div class="btn-row"><a href="https://wa.me/573226627246" target="_blank" rel="noopener" class="btn btn-primary">Cotizar por WhatsApp</a><a href="#servicios" class="btn btn-ghost">Ver servicios</a></div>
+</div>
+<div class="readout">
+<div class="readout-bar"><span class="dot live"></span> DIAGNÓSTICO EN VIVO — MOTOR 1HP</div>
+<div class="readout-body">
+<div class="readout-row"><span class="label">BOBINADO</span><span class="val ok">OK</span></div>
+<div class="readout-row"><span class="label">VOLTAJE DE PRUEBA</span><span class="val">220V</span></div>
+<div class="readout-row"><span class="label">AISLAMIENTO</span><span class="val ok">PASA</span></div>
+<div class="readout-row"><span class="label">RODAMIENTOS</span><span class="val">CAMBIAR</span></div>
+<div class="readout-row"><span class="label">TIEMPO ESTIMADO</span><span class="val">24-48H</span></div>
+<div class="readout-row"><span class="label">ESTADO</span><span class="val ok">REPARADO</span></div>
+</div>
+<div class="readout-footer mono">// así diagnosticamos cada equipo que entra al taller</div>
+</div>
+</div></section>
+<section id="servicios"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Servicios</div><h2>Todo lo eléctrico, en un solo taller.</h2><p>Atendemos equipos residenciales, comerciales e industriales.</p></div>
+</div>
+<div class="services-grid">
+<div class="service-card"><div class="num mono">01</div><h3>Bombas de agua</h3><p>Bombas sumergibles, periféricas y centrífugas. Diagnóstico de falla, cambio de sellos, impulsores y rebobinado.</p></div>
+<div class="service-card"><div class="num mono">02</div><h3>Motores eléctricos</h3><p>Monofásicos y trifásicos. Rebobinado, cambio de rodamientos, balanceo y prueba de aislamiento bajo carga.</p></div>
+<div class="service-card"><div class="num mono">03</div><h3>Mantenimiento preventivo</h3><p>Revisión periódica para equipos en uso constante, antes de que la falla te saque de operación.</p></div>
+<div class="service-card"><div class="num mono">04</div><h3>Venta de repuestos</h3><p>Capacitores, rodamientos, sellos mecánicos, carbones e impulsores.</p></div>
+<div class="service-card"><div class="num mono">05</div><h3>Diagnóstico sin compromiso</h3><p>Te decimos qué tiene el equipo y el costo real antes de iniciar cualquier reparación.</p></div>
+<div class="service-card"><div class="num mono">06</div><h3>Garantía por escrito</h3><p>Toda reparación sale del taller con garantía sobre la mano de obra y los repuestos instalados.</p></div>
+</div></section>
+<section id="proceso"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Cómo trabajamos</div><h2>El mismo proceso, cada vez.</h2><p>Sin atajos. Así pasa tu equipo por el taller, de la entrada a la entrega.</p></div>
+<div class="process-list">
+<div class="process-step"><div class="step-num mono">01</div><div><h3>Recepción y diagnóstico</h3><p>Revisamos el equipo e identificamos la falla.</p></div></div>
+<div class="process-step"><div class="step-num mono">02</div><div><h3>Cotización</h3><p>Te enviamos el costo por WhatsApp. Tú decides si seguimos.</p></div></div>
+<div class="process-step"><div class="step-num mono">03</div><div><h3>Reparación</h3><p>Trabajamos el equipo en el taller con repuestos de calidad.</p></div></div>
+<div class="process-step"><div class="step-num mono">04</div><div><h3>Prueba final y entrega</h3><p>El equipo sale probado bajo carga, con garantía por escrito.</p></div></div>
+</div>
+</div></section>
+<section id="trabajos"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Trabajos realizados</div><h2>Galería del taller.</h2><p>Estamos documentando cada reparación en video y foto.</p></div>
+<div class="gallery-grid">
+<div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 7h16v13H4z"/><path d="M8 7V4h8v3"/></svg><span>PRÓXIMAMENTE</span></div>
+<div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 7h16v13H4z"/><path d="M8 7V4h8v3"/></svg><span>PRÓXIMAMENTE</span></div>
+<div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 7h16v13H4z"/><path d="M8 7V4h8v3"/></svg><span>PRÓXIMAMENTE</span></div>
+<div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 7h16v13H4z"/><path d="M8 7V4h8v3"/></svg><span>PRÓXIMAMENTE</span></div>
+</div>
+<div class="gallery-note">// espacio listo para fotos y clips del taller</div>
+</div></section>
+<section id="ubicacion"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Visítanos</div><h2>Taller físico en San Benito.</h2><p>Trae tu equipo directamente o escríbenos antes para confirmar disponibilidad.</p></div>
+<div class="loc-grid">
+<div class="loc-card">
+<div class="loc-row"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="t mono">DIRECCIÓN</div><div class="v">Cra 56A #50-76, San Benito, Medellín</div></div></div>
+<div class="loc-row"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><div class="t mono">HORARIO</div><div class="v">Lunes a sábado, 8:00 a.m. - 5:00 p.m.</div></div></div>
+<div class="loc-row"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L14 14l5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg><div><div class="t mono">WHATSAPP</div><div class="v">+57 322 662 7246</div></div></div>
+<div class="loc-row"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><div><div class="t mono">GARANTÍA</div><div class="v">Mano de obra y repuestos respaldados por escrito</div></div></div>
+</div>
+<div class="map-frame"><iframe src="https://www.google.com/maps?q=Cra+56A+%2350-76,+San+Benito,+Medell%C3%ADn&output=embed" loading="lazy"></iframe></div>
+</div>
+</div></section>
+<div class="cta-section">
+<div class="eyebrow" style="justify-content:center;">Hablemos de tu equipo</div>
+<h2>¿Tu bomba o motor está fallando?</h2>
+<p>Mándanos una foto por WhatsApp y te decimos qué puede estar pasando.</p>
+<a href="https://wa.me/573226627246" target="_blank" rel="noopener" class="btn btn-primary">Escribir al +57 322 662 7246</a>
+<div class="social-row">
+<div class="social-pill"><span class="dot-small"></span> TikTok — próximamente</div>
+<div class="social-pill"><span class="dot-small"></span> Facebook — próximamente</div>
+</div>
+</div>
+<footer><span class="f-logo">ELECTROSOCIOS</span> — San Benito, Medellín · Reparación de bombas de agua y motores eléctricos</footer>
+</body>
+</html>
