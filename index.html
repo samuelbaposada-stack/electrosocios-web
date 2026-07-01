@@ -171,6 +171,18 @@
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
   }
+
+/* MARCAS */
+.marcas-categoria{margin-bottom:8px;}
+.marcas-cat-label{font-size:11px;color:var(--gray);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:24px;}
+.marcas-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);}
+@media(max-width:760px){.marcas-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:480px){.marcas-grid{grid-template-columns:repeat(2,1fr);}}
+.marca-item{background:var(--bg);display:flex;align-items:center;justify-content:center;padding:28px 16px;min-height:80px;}
+.marca-item img{max-width:100px;max-height:40px;object-fit:contain;filter:grayscale(1) brightness(1.8);transition:filter .2s;}
+.marca-item img:hover{filter:grayscale(0) brightness(1);}
+.marca-text,.marca-fallback{font-family:'JetBrains Mono';font-size:13px;font-weight:700;color:var(--gray);letter-spacing:0.08em;text-transform:uppercase;}
+
 </style>
 </head>
 <body>
@@ -185,7 +197,8 @@
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#proceso">Proceso</a></li>
       <li><a href="#trabajos">Trabajos</a></li>
-      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#marcas">Marcas</a></li>
+<li><a href="#ubicacion">Ubicación</a></li>
     </ul>
     <a class="nav-cta" href="https://wa.me/573226627246" target="_blank" rel="noopener">Escribir por WhatsApp</a>
   </nav>
@@ -342,6 +355,40 @@
     <div class="social-pill"><span class="dot-small"></span> Facebook — próximamente</div>
   </div>
 </div>
+
+
+<!-- MARCAS -->
+<section id="marcas">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Marcas</div>
+      <h2>Marcas que manejamos y reparamos.</h2>
+      <p>Trabajamos con las principales marcas del mercado en bombas de agua y motores eléctricos.</p>
+    </div>
+    <div class="marcas-categoria">
+      <div class="marcas-cat-label mono">Bombas de agua</div>
+      <div class="marcas-grid">
+        <div class="marca-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Pedrollo_logo.png/200px-Pedrollo_logo.png" alt="Pedrollo" onerror="this.parentNode.innerHTML='<span class=marca-text>PEDROLLO</span>'"></div>
+        <div class="marca-item"><span class="marca-text">HCP</span></div>
+        <div class="marca-item"><span class="marca-text">BARNES</span></div>
+        <div class="marca-item"><span class="marca-text">IHM</span></div>
+        <div class="marca-item"><span class="marca-text">EVANS</span></div>
+        <div class="marca-item"><span class="marca-text">GRUNDFOS</span></div>
+      </div>
+    </div>
+    <div class="marcas-categoria" style="margin-top:48px;">
+      <div class="marcas-cat-label mono">Motores eléctricos</div>
+      <div class="marcas-grid">
+        <div class="marca-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/WEG_logo.svg/200px-WEG_logo.svg.png" alt="WEG" onerror="this.parentNode.innerHTML='<span class=marca-text>WEG</span>'"></div>
+        <div class="marca-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Siemens-logo.svg/200px-Siemens-logo.svg.png" alt="Siemens" onerror="this.parentNode.innerHTML='<span class=marca-text>SIEMENS</span>'"></div>
+        <div class="marca-item"><span class="marca-text">CENTURY</span></div>
+        <div class="marca-item"><span class="marca-text">LEESON</span></div>
+        <div class="marca-item"><span class="marca-text">ABB</span></div>
+        <div class="marca-item"><span class="marca-text">BALDOR</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   <span class="f-logo">ELECTROSOCIOS</span> — San Benito, Medellín · Reparación de bombas de agua y motores eléctricos
